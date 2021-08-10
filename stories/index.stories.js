@@ -148,6 +148,10 @@ export const Default = () => {
         type: String,
         default: text('Point color (hex/rgb)', '#e91e63')
       },
+      textColor: {
+        type: String,
+        default: text('Text color (hex/rgb)', '#000000')
+      },
       clickable: {
         type: [String, Boolean],
         default: boolean('Clickable', true)
@@ -175,6 +179,7 @@ export const Default = () => {
       :line-thickness="lineThickness"
       :point-size="pointSize"
       :point-color="pointColor"
+      :text-color="textColor"
       :clickable="clickable"
       @click="action"
     />`
@@ -302,6 +307,10 @@ export const Slot = () => {
         type: String,
         default: text('Point color (hex/rgb)', '#e91e63')
       },
+      textColor: {
+        type: String,
+        default: text('Text color (hex/rgb)', '#000000')
+      },
       clickable: {
         type: [String, Boolean],
         default: boolean('Clickable', true)
@@ -329,6 +338,7 @@ export const Slot = () => {
       :line-thickness="lineThickness"
       :point-size="pointSize"
       :point-color="pointColor"
+      :text-color="textColor"
       :clickable="clickable"
       @click="action"
     >

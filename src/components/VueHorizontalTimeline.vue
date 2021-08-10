@@ -131,6 +131,10 @@ export default {
       type: String,
       default: '#e91e63'
     },
+    textColor: {
+      type: String,
+      default: '#000000'
+    },
     clickable: {
       type: [String, Boolean],
       default: true
@@ -208,10 +212,22 @@ export default {
     setCSSVariables () {
       this.$refs.timeline.style.setProperty("--point-size", this.pointSize)
       this.$refs.timeline.style.setProperty("--point-color", this.pointColor)
+      this.$refs.timeline.style.setProperty("--text-color", this.textColor)
     }
   },
   mounted () {
     this.setCSSVariables()
+  },
+  watch: {
+    pointSize () {
+      this.setCSSVariables()
+    },
+    pointColor () {
+      this.setCSSVariables()
+    },
+    textColor () {
+      this.setCSSVariables()
+    }
   }
 }
 </script>
