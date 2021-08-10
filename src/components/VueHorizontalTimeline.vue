@@ -1,11 +1,11 @@
 <template>
-  <div class="vue-horizontal-timeline" :style="setTimelineStyles">
+  <div class="vue-horizontal-timeline" ref="timeline" :style="setTimelineStyles">
     <section class="timeline">
       <ol>
         <li
           v-for="(item, i) in items"
           :key="i"
-          :style="setLineColor"
+          :style="setLineStyles"
           :class="{'add-step': $scopedSlots.default || item[titleAttr] || item[contentAttr]}"
         >
           <div
@@ -15,6 +15,14 @@
             :style="getTimeStyles" @click="cardClicked(item)"
           >
             <slot v-if="$scopedSlots.default" v-bind:item="item"/>
+            <span
+              class="opposite">
+              {{ item[oppositeAttr] }}
+            </span>
+            <img
+              class="image"
+              v-if="!$scopedSlots.default && item[imageAttr]"
+              :src="item[imageAttr]"/>
             <span
               class="title"
               v-if="!$scopedSlots.default && item[titleAttr]"
@@ -29,7 +37,7 @@
             </span>
           </div>
         </li>
-        <li :style="setLineColor"></li>
+        <li :style="setLineStyles"></li>
       </ol>
     </section>
   </div>
@@ -50,6 +58,14 @@ export default {
     itemUniqueKey: {
       type: String,
       default: ''
+    },
+    oppositeAttr: {
+      type: String,
+      default: 'year'
+    },
+    imageAttr: {
+      type: String,
+      default: 'image'
     },
     titleAttr: {
       type: String,
@@ -103,6 +119,18 @@ export default {
       type: String,
       default: '#03A9F4'
     },
+    lineThickness: {
+      type: String,
+      default: '3px'
+    },
+    pointSize: {
+      type: String,
+      default: '14px'
+    },
+    pointColor: {
+      type: String,
+      default: '#e91e63'
+    },
     clickable: {
       type: [String, Boolean],
       default: true
@@ -128,10 +156,10 @@ export default {
 
       return styleObj
     },
-    setLineColor () {
-      const { lineColor } = this
+    setLineStyles () {
+      const { lineColor, lineThickness } = this
 
-      return lineColor ? `background: ${lineColor}` : ''
+      return `${lineColor ? `background: ${lineColor};` : ''} ${lineThickness ? `height: ${lineThickness};` : ''}`
     },
     getTimeStyles () {
       const { minWidth, minHeight, clickable } = this
@@ -176,7 +204,14 @@ export default {
       }
 
       return {}
+    },
+    setCSSVariables () {
+      this.$refs.timeline.style.setProperty("--point-size", this.pointSize)
+      this.$refs.timeline.style.setProperty("--point-color", this.pointColor)
     }
+  },
+  mounted () {
+    this.setCSSVariables()
   }
 }
 </script>

@@ -30,22 +30,28 @@ export default {
 export const Default = () => {
   const label1 = 'Object 1'
   const defaultValue1 = {
+    year: '2019',
     title: 'Title example 1',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.'
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.',
+    image: 'https://raw.githubusercontent.com/guastallaigor/vue-horizontal-timeline/master/.github/logo.png'
   }
   const value1 = object(label1, defaultValue1)
 
   const label2 = 'Object 2'
   const defaultValue2 = {
+    year: '2020',
     title: 'Title example 2',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.'
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.',
+    image: 'https://raw.githubusercontent.com/guastallaigor/vue-horizontal-timeline/master/.github/logo.png'
   }
   const value2 = object(label2, defaultValue2)
 
   const label3 = 'Object 3'
   const defaultValue3 = {
+    year: '2021',
     title: 'Title example 3',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.'
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.',
+    image: 'https://raw.githubusercontent.com/guastallaigor/vue-horizontal-timeline/master/.github/logo.png'
   }
   const value3 = object(label3, defaultValue3)
 
@@ -70,13 +76,17 @@ export const Default = () => {
         type: String,
         default: text('Item unique key', 'title')
       },
+      oppositeAttr: {
+        type: String,
+        default: text('Opposite attribute', 'year')
+      },
       titleAttr: {
         type: String,
         default: text('Title attribute', 'title')
       },
       titleCentered: {
         type: Boolean,
-        default: boolean('Title centered', false)
+        default: boolean('Title centered', true)
       },
       titleClass: {
         type: String,
@@ -89,6 +99,10 @@ export const Default = () => {
       contentAttr: {
         type: String,
         default: text('Content attribute', 'content')
+      },
+      imageAttr: {
+        type: String,
+        default: text('Image attribute', 'image')
       },
       contentCentered: {
         type: Boolean,
@@ -122,6 +136,18 @@ export const Default = () => {
         type: String,
         default: text('Line color (hex/rgb)', '#03A9F4')
       },
+      lineThickness: {
+        type: String,
+        default: text('Line thickness (px/rem/em/%)', '3px')
+      },
+      pointSize: {
+        type: String,
+        default: text('Point Size (px/rem/em/%)', '14px')
+      },
+      pointColor: {
+        type: String,
+        default: text('Point color (hex/rgb)', '#e91e63')
+      },
       clickable: {
         type: [String, Boolean],
         default: boolean('Clickable', true)
@@ -131,6 +157,8 @@ export const Default = () => {
       :items="items"
       :item-selected.sync="item"
       :item-unique-key="itemUniqueKey"
+      :opposite-attr="oppositeAttr"
+      :image-attr="imageAttr"
       :title-centered="titleCentered"
       :title-attr="titleAttr"
       :title-class="titleClass ? 'custom-class' : ''"
@@ -144,6 +172,9 @@ export const Default = () => {
       :timeline-padding="timelinePadding"
       :timeline-background="timelineBackground"
       :line-color="lineColor"
+      :line-thickness="lineThickness"
+      :point-size="pointSize"
+      :point-color="pointColor"
       :clickable="clickable"
       @click="action"
     />`
@@ -153,22 +184,28 @@ export const Default = () => {
 export const Slot = () => {
   const label1 = 'Object 1'
   const defaultValue1 = {
+    year: '2019',
     title: 'Title example 1',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.'
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.',
+    image: 'https://raw.githubusercontent.com/guastallaigor/vue-horizontal-timeline/master/.github/logo.png'
   }
   const value1 = object(label1, defaultValue1)
 
   const label2 = 'Object 2'
   const defaultValue2 = {
+    year: '2020',
     title: 'Title example 2',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.'
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.',
+    image: 'https://raw.githubusercontent.com/guastallaigor/vue-horizontal-timeline/master/.github/logo.png'
   }
   const value2 = object(label2, defaultValue2)
 
   const label3 = 'Object 3'
   const defaultValue3 = {
+    year: '2021',
     title: 'Title example 3',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.'
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.',
+    image: 'https://raw.githubusercontent.com/guastallaigor/vue-horizontal-timeline/master/.github/logo.png'
   }
   const value3 = object(label3, defaultValue3)
 
@@ -193,13 +230,17 @@ export const Slot = () => {
         type: String,
         default: text('Item unique key', 'title')
       },
+      oppositeAttr: {
+        type: String,
+        default: text('Opposite attribute', 'year')
+      },
       titleAttr: {
         type: String,
         default: text('Title attribute', 'title')
       },
       titleCentered: {
         type: Boolean,
-        default: boolean('Title centered', false)
+        default: boolean('Title centered', true)
       },
       titleClass: {
         type: String,
@@ -212,6 +253,10 @@ export const Slot = () => {
       contentAttr: {
         type: String,
         default: text('Content attribute', 'content')
+      },
+      imageAttr: {
+        type: String,
+        default: text('Image attribute', 'image')
       },
       contentCentered: {
         type: Boolean,
@@ -245,6 +290,18 @@ export const Slot = () => {
         type: String,
         default: text('Line color (hex/rgb)', '#03A9F4')
       },
+      lineThickness: {
+        type: String,
+        default: text('Line thickness (px/rem/em/%)', '3px')
+      },
+      pointSize: {
+        type: String,
+        default: text('Point Size (px/rem/em/%)', '14px')
+      },
+      pointColor: {
+        type: String,
+        default: text('Point color (hex/rgb)', '#e91e63')
+      },
       clickable: {
         type: [String, Boolean],
         default: boolean('Clickable', true)
@@ -254,6 +311,8 @@ export const Slot = () => {
       :items="items"
       :item-selected.sync="item"
       :item-unique-key="itemUniqueKey"
+      :opposite-attr="oppositeAttr"
+      :image-attr="imageAttr"
       :title-centered="titleCentered"
       :title-attr="titleAttr"
       :title-class="titleClass ? 'custom-class' : ''"
@@ -267,6 +326,9 @@ export const Slot = () => {
       :timeline-padding="timelinePadding"
       :timeline-background="timelineBackground"
       :line-color="lineColor"
+      :line-thickness="lineThickness"
+      :point-size="pointSize"
+      :point-color="pointColor"
       :clickable="clickable"
       @click="action"
     >
