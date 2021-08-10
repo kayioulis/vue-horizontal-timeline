@@ -33,7 +33,8 @@ export const Default = () => {
     year: '2019',
     title: 'Title example 1',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.',
-    image: 'https://raw.githubusercontent.com/guastallaigor/vue-horizontal-timeline/master/.github/logo.png'
+    image: 'https://raw.githubusercontent.com/guastallaigor/vue-horizontal-timeline/master/.github/logo.png',
+    color: 'red'
   }
   const value1 = object(label1, defaultValue1)
 
@@ -42,7 +43,8 @@ export const Default = () => {
     year: '2020',
     title: 'Title example 2',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.',
-    image: 'https://raw.githubusercontent.com/guastallaigor/vue-horizontal-timeline/master/.github/logo.png'
+    image: 'https://raw.githubusercontent.com/guastallaigor/vue-horizontal-timeline/master/.github/logo.png',
+    color: 'red'
   }
   const value2 = object(label2, defaultValue2)
 
@@ -152,6 +154,10 @@ export const Default = () => {
         type: String,
         default: text('Text color (hex/rgb)', '#000000')
       },
+      cardTextColorAttr: {
+        type: String,
+        default: text('Card Text Color attribute', 'color')
+      },
       clickable: {
         type: [String, Boolean],
         default: boolean('Clickable', true)
@@ -180,6 +186,7 @@ export const Default = () => {
       :point-size="pointSize"
       :point-color="pointColor"
       :text-color="textColor"
+      :card-text-color-attr="cardTextColorAttr"
       :clickable="clickable"
       @click="action"
     />`
@@ -192,7 +199,8 @@ export const Slot = () => {
     year: '2019',
     title: 'Title example 1',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.',
-    image: 'https://raw.githubusercontent.com/guastallaigor/vue-horizontal-timeline/master/.github/logo.png'
+    image: 'https://raw.githubusercontent.com/guastallaigor/vue-horizontal-timeline/master/.github/logo.png',
+    color: 'red'
   }
   const value1 = object(label1, defaultValue1)
 
@@ -201,7 +209,8 @@ export const Slot = () => {
     year: '2020',
     title: 'Title example 2',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.',
-    image: 'https://raw.githubusercontent.com/guastallaigor/vue-horizontal-timeline/master/.github/logo.png'
+    image: 'https://raw.githubusercontent.com/guastallaigor/vue-horizontal-timeline/master/.github/logo.png',
+    color: 'red'
   }
   const value2 = object(label2, defaultValue2)
 
@@ -311,6 +320,10 @@ export const Slot = () => {
         type: String,
         default: text('Text color (hex/rgb)', '#000000')
       },
+      cardTextColorAttr: {
+        type: String,
+        default: text('Card Text Color attribute', 'color')
+      },
       clickable: {
         type: [String, Boolean],
         default: boolean('Clickable', true)
@@ -339,6 +352,7 @@ export const Slot = () => {
       :point-size="pointSize"
       :point-color="pointColor"
       :text-color="textColor"
+      :card-text-color-attr="cardTextColorAttr"
       :clickable="clickable"
       @click="action"
     >

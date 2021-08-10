@@ -16,7 +16,8 @@
           >
             <slot v-if="$scopedSlots.default" v-bind:item="item"/>
             <span
-              class="opposite">
+              class="opposite"
+              :style="item[cardTextColorAttr] ? `color: ${item[cardTextColorAttr]};` : ''">
               {{ item[oppositeAttr] }}
             </span>
             <img
@@ -26,13 +27,15 @@
             <span
               class="title"
               v-if="!$scopedSlots.default && item[titleAttr]"
-              :class="getTitleClasses">
+              :class="getTitleClasses"
+              :style="item[cardTextColorAttr] ? `color: ${item[cardTextColorAttr]};` : ''">
               {{ item[titleAttr] | textSubstr(titleSubstr) }}
             </span>
             <span
               class="content"
               v-if="!$scopedSlots.default && item[contentAttr]"
-              :class="getContentClasses">
+              :class="getContentClasses"
+              :style="item[cardTextColorAttr] ? `color: ${item[cardTextColorAttr]};` : ''">
               {{ item[contentAttr] | textSubstr(contentSubstr) }}
             </span>
           </div>
@@ -134,6 +137,10 @@ export default {
     textColor: {
       type: String,
       default: '#000000'
+    },
+    cardTextColorAttr: {
+      type: String,
+      default: 'color'
     },
     clickable: {
       type: [String, Boolean],
