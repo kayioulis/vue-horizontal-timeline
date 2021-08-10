@@ -119,25 +119,30 @@ plugins: ["~/plugins/vue-horizontal-timeline.js"];
 
 ## Props
 
-| Property name       | Type    | Default   | Description                                                                                    |
-| ------------------- | ------- | --------- | ---------------------------------------------------------------------------------------------- |
-| items               | Array   | null      | Array of objects to be displayed. Must have at least a content property                        |
-| item-selected       | Object  | {}        | Object that is set when it is clicked. Note that `clickable` prop must be set to true          |
-| item-unique-key     | String  | ''        | Key to set a blue border to the card when it is clicked (`clickable` prop must be set to true) |
-| title-attr          | String  | 'title'   | Name of the property inside the objects, that are in the items array, to set the cards title   |
-| title-centered      | Boolean | false     | Centralizes the cards title                                                                    |
-| title-class         | String  | ''        | If you want to set a custom class to the cards title, set it here                              |
-| title-substr        | String  | 18        | Number of characters to display inside the cards title. Above this, will set a '...' mask      |
-| content-attr        | String  | 'content' | Name of the property inside the objects, that are in the items array, to set the cards content |
-| content-centered    | Boolean | false     | Centralizes all the cards content text                                                         |
-| content-class       | String  | ''        | If you want to set a custom class to the cards content, set it here                            |
-| content-substr      | String  | 250       | Number of characters to display inside the cards content. Above this, will set a '...' mask    |
-| min-width           | String  | '200px'   | Min-width of the timeline                                                                      |
-| min-height          | String  | ''        | Min-height of the timeline                                                                     |
-| timeline-padding    | String  | ''        | Padding of the timeline                                                                        |
-| timeline-background | String  | '#E9E9E9' | Background color of the whole timeline                                                         |
-| line-color          | String  | '#03A9F4' | Color of the line inside the timeline                                                          |
-| clickable           | Boolean | true      | Makes the card clickable that returns the object                                               |
+| Property name       | Type    | Default    | Description                                                                                    |
+| ------------------- | ------- | ---------  | ---------------------------------------------------------------------------------------------- |
+| items               | Array   | null       | Array of objects to be displayed. Must have at least a content property                        |
+| item-selected       | Object  | {}         | Object that is set when it is clicked. Note that `clickable` prop must be set to true          |
+| item-unique-key     | String  | ''         | Key to set a blue border to the card when it is clicked (`clickable` prop must be set to true) |
+| opposite-attr       | String  | 'opposite' | Name of the property inside the objects, that are in the items array, to set tbe opposite text |
+| image-attr          | String  | 'image'    | Name of the property inside the objects, that are in the items array, to set tbe image source  |
+| title-attr          | String  | 'title'    | Name of the property inside the objects, that are in the items array, to set the cards title   |
+| title-centered      | Boolean | false      | Centralizes the cards title                                                                    |
+| title-class         | String  | ''         | If you want to set a custom class to the cards title, set it here                              |
+| title-substr        | String  | 18         | Number of characters to display inside the cards title. Above this, will set a '...' mask      |
+| content-attr        | String  | 'content'  | Name of the property inside the objects, that are in the items array, to set the cards content |
+| content-centered    | Boolean | false      | Centralizes all the cards content text                                                         |
+| content-class       | String  | ''         | If you want to set a custom class to the cards content, set it here                            |
+| content-substr      | String  | 250        | Number of characters to display inside the cards content. Above this, will set a '...' mask    |
+| min-width           | String  | '200px'    | Min-width of the timeline                                                                      |
+| min-height          | String  | ''         | Min-height of the timeline                                                                     |
+| timeline-padding    | String  | ''         | Padding of the timeline                                                                        |
+| timeline-background | String  | '#E9E9E9'  | Background color of the whole timeline                                                         |
+| line-color          | String  | '#03A9F4'  | Color of the line inside the timeline                                                          |
+| line-thickness      | String  | '3px'      | Thickness of the line inside the timeline                                                      |
+| point-size          | String  | '14px'     | Size of the point of each card on the line on the timeline                                     |
+| point-color         | String  | '#e91e63'  | Color of the point of each card on the line on the timeline                                     |
+| clickable           | Boolean | true       | Makes the card clickable that returns the object                                               |
 
 ## Development
 
