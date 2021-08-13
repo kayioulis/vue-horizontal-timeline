@@ -48,10 +48,22 @@
 				&:last-child {
 					width: 330px;
 				}
+				&.divider::after {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					bottom: 0;
+					width: 2px;
+					height: var(--point-size, 14px);
+					transform: translateY(-50%) translateX(-50%);
+					border-radius: 50%;
+					background: var(--point-color, #e91e63);
+				}
 				&.add-step:not(:last-child) {
 					padding-right: 0px;
 					margin-right: 0px;
-					&::after {
+					&:not(.divider)::after {
 						content: '';
 						position: absolute;
 						top: 50%;

@@ -6,10 +6,10 @@
           v-for="(item, i) in items"
           :key="i"
           :style="setLineStyles"
-          :class="{'add-step': $scopedSlots.default || item[titleAttr] || item[contentAttr]}"
+          :class="{'add-step': $scopedSlots.default || item[titleAttr] || item[contentAttr], 'divider': item['divider']}"
         >
           <div
-            v-if="$scopedSlots.default || item[titleAttr] || item[contentAttr]"
+            v-if="$scopedSlots.default || item[titleAttr] || item[contentAttr] || item[oppositeAttr] || item[imageAttr]"
             class="time"
             :class="getTimeClass(item)"
             :style="getTimeStyles" @click="cardClicked(item)"
@@ -17,6 +17,7 @@
             <slot v-if="$scopedSlots.default" v-bind:item="item"/>
             <span
               class="opposite"
+              v-if="!$scopedSlots.default && item[oppositeAttr]"
               :style="item[cardTextColorAttr] ? `color: ${item[cardTextColorAttr]};` : ''">
               {{ item[oppositeAttr] }}
             </span>
